@@ -9,12 +9,6 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/bobbybabu007/cicd-ocp-gha-spring-petclinic.git'
             }
         }
-        stage('Compile') {
-            steps {
-                echo 'Compiling..'
-                sh 'mvn clean compile'
-            }
-        }
         stage('Test') {
             steps {
                 echo 'Testing..'
